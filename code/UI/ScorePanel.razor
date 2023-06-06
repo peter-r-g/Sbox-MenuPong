@@ -1,0 +1,23 @@
+@using Sandbox
+@using Sandbox.UI
+@using System
+
+@attribute [StyleSheet]
+@inherits Panel
+@namespace Pong
+
+<root>
+    <label class="name" style="text-align: right;">@(GameMenu.Instance.Player1?.Name ?? "Player")</label>
+    <label class="score">@(GameMenu.Instance.Player1?.Score ?? 0)</label>
+    <div class="divider" />
+    <label class="score">@(GameMenu.Instance.Player2?.Score ?? 0)</label>
+    <label class="name" style="text-align: left;">@(GameMenu.Instance.Player2?.Name ?? "CPU")</label>
+</root>
+
+@code {
+    /// <inheritdoc/>
+    protected override int BuildHash()
+    {
+        return HashCode.Combine( GameMenu.Instance.Player1?.Score, GameMenu.Instance.Player2?.Score );
+    }
+}

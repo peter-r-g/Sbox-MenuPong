@@ -1,0 +1,23 @@
+@using Sandbox;
+@using Sandbox.Menu;
+@using Sandbox.UI;
+@using System;
+
+@attribute [StyleSheet]
+@inherits RootPanel
+@implements IGameMenuPanel
+@namespace Pong
+
+<root>
+    <ScorePanel />
+    <TallyPanel />
+
+    <label class="standby @(TimeUntilPlay <= 0 ? "hidden" : "")">@(Math.Ceiling( TimeUntilPlay ))</label>
+    <div class="controls @(TimeUntilPlay <= 0 ? "hidden" : "")">
+        <label>RMB - Add ball</label>
+        <label>MMB - Remove ball</label>
+    </div>
+
+    <div @ref="Player1Visual" class="player" style="left: 5%" />
+    <div @ref="Player2Visual" class="player" style="right: 5%" />
+</root>

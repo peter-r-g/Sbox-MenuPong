@@ -1,0 +1,23 @@
+TallyPanel {
+    width: 100%;
+    height: 100px;
+
+    left: 0%;
+    top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    label {
+        width: 100%;
+
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: bold;
+
+        color: white;
+        text-align: center;
+    }
+}

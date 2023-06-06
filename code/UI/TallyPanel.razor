@@ -1,0 +1,44 @@
+@using Sandbox
+@using Sandbox.UI
+
+@attribute [StyleSheet]
+@inherits Panel
+@namespace Pong
+
+<root>
+    <label>@Tally</label>
+    <label>Tally</label>
+</root>
+
+@code {
+    /// <summary>
+    /// The amount of times paddles have hit balls. Represents the current streak the paddles have going on.
+    /// </summary>
+    public int Tally { get; private set; }
+
+    /// <inheritdoc/>
+    protected override int BuildHash()
+    {
+        return Tally;
+    }
+
+    /// <summary>
+    /// Invoked when a paddle has intercepted a ball.
+    /// </summary>
+    /// <param name="ball">The ball that was intercepted.</param>
+    /// <param name="paddle">The paddle that intercepted the ball.</param>
+    [Event( "pong.paddlecollide" )]
+    private void OnPaddleCollide( Ball ball, Paddle paddle )
+    {
+        Tally++;
+    }
+
+    /// <summary>
+    /// Invoked when a game has ended and needs to be reset.
+    /// </summary>
+    [Event( "pong.gamereset" )]
+    private void OnGameReset()
+    {
+        Tally = 0;
+    }
+}

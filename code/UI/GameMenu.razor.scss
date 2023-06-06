@@ -1,0 +1,63 @@
+﻿.player {
+	position: absolute;
+	width: 1%;
+	height: 15%;
+
+	top: 0%;
+
+	background-color: white;
+}
+
+.ball {
+	position: absolute;
+	width: 1.5vw;
+	height: 1.5vw;
+
+	left: 50%;
+	top: 50%;
+
+	border-radius: 50%;
+	background-color: white;
+}
+
+.standby {
+	position: absolute;
+	width: 20%;
+
+	top: 30%;
+	left: 40%;
+
+	font-family: Roboto;
+	font-size: 64px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.controls {
+	position: absolute;
+	width: 40%;
+
+	top: 80%;
+	left: 30%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: nowrap;
+
+	label {
+		width: 100%;
+
+		font-family: Roboto;
+		font-size: 64px;
+		font-weight: bold;
+
+		color: white;
+		text-align: center;
+	}
+}
+
+.hidden {
+	display: none;
+}
