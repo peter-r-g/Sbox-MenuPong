@@ -87,6 +87,10 @@
           "r": "Collide"
         }
       ]
-    }
+    },
+    "Summary": "A simple Pong game you can play in the menu",
+    "Description": "You can view the code here: https://github.com/peter-r-g/Sbox-MenuPong",
+    "Public": true,
+    "ReplaceTags": "menu pong"
   }
 }
