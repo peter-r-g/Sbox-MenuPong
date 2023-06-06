@@ -1,0 +1,92 @@
+{
+  "Title": "Menu Pong",
+  "Type": "game",
+  "Org": "gooman",
+  "Ident": "menu_pong",
+  "Tags": "menu pong",
+  "Schema": 1,
+  "HasAssets": false,
+  "AssetsPath": "",
+  "Resources": null,
+  "MenuResources": "\nUI/GameMenu.razor.scss\nUI/ScorePanel.razor.scss\nUI/TallyPanel.razor.scss",
+  "HasCode": true,
+  "CodePath": "/code/",
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "MaxPlayers": 1,
+    "MinPlayers": 1,
+    "GameNetworkType": "Singleplayer",
+    "MapSelect": "Empty",
+    "MapList": [],
+    "RankType": "None",
+    "PerMapRanking": false,
+    "LeaderboardType": "None",
+    "ProjectTemplate": null,
+    "CsProjName": "",
+    "HttpAllowList": null,
+    "ControlModes": {
+      "Keyboard": true,
+      "Gamepad": true
+    },
+    "InputSettings": {
+      "Actions": [
+        {
+          "Name": "AddBall",
+          "KeyboardCode": "mouse1",
+          "GamepadCode": "LeftTrigger",
+          "GroupName": "BallManagement"
+        },
+        {
+          "Name": "RemoveBall",
+          "KeyboardCode": "mouse2",
+          "GamepadCode": "RightTrigger",
+          "GroupName": "BallManagement"
+        }
+      ]
+    },
+    "Compiler": {
+      "RootNamespace": "Pong",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;",
+      "Nullables": true,
+      "References": [],
+      "DistinctReferences": []
+    },
+    "Collision": {
+      "Defaults": {
+        "solid": "Collide",
+        "trigger": "Trigger",
+        "ladder": "Ignore",
+        "water": "Trigger"
+      },
+      "Pairs": [
+        {
+          "a": "solid",
+          "b": "solid",
+          "r": "Collide"
+        },
+        {
+          "a": "trigger",
+          "b": "playerclip",
+          "r": "Ignore"
+        },
+        {
+          "a": "trigger",
+          "b": "solid",
+          "r": "Trigger"
+        },
+        {
+          "a": "solid",
+          "b": "trigger",
+          "r": "Collide"
+        },
+        {
+          "a": "playerclip",
+          "b": "solid",
+          "r": "Collide"
+        }
+      ]
+    }
+  }
+}
